@@ -5,13 +5,18 @@
 # expanded_form(70304); # Should return '70000 + 300 + 4'
 # NOTE: All numbers will be whole numbers greater than 0.
 
-
 def expanded_form(num)
   # Your code here
 end
 
+Split up number into separate elements into array
+string = num.to_s.split('')
 
-Split up number into differnt element in array
-  num.to_s.split(//)
-Add zeros passed on index position
-0 putarray.count -1 
+Add zeros bassed on index position and count of elements in array
+hash = string.each_with_index.to_h.invert
+
+
+
+Change back to String
+.map(&:to_i)
+array.join(" + ")
