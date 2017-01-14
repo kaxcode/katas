@@ -13,10 +13,27 @@ Split up number into separate elements into array
 string = num.to_s.split('')
 
 Add zeros bassed on index position and count of elements in array
-hash = string.each_with_index.to_h.invert
+hash = string.each_with_index do |num, index|
+  "#{num} + #{index}"
 
 
 
 Change back to String
 .map(&:to_i)
 array.join(" + ")
+
+
+
+num.
+  to_s.
+  chars.
+  reverse.
+  map.with_index { |x, index| x.to_i * (10 ** index) }.
+  reverse.
+  reject { |x| x == 0}.
+  join(" + ").
+
+
+  Why does puts return nil but p doesn't
+
+.tap { |debug| p debug}
