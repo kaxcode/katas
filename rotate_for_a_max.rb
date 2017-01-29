@@ -17,30 +17,33 @@
 # max_rot(56789) should return 68957
 
 def max_rot(n)
-  1.
-    n = n.to_s.split("").map(&:to_i)
-    set1 = n
-  2.
-     two = n.rotate
-     set2 = n.rotate
-  3.
-    two
-    n1 = two.rotate!.pop
-    three = two.rotate
-    set3 = three.unshift(n1)
+  array = []
 
-  4.
-    three
-    n2 = three.rotate!.pop
-    n2 = three.rotate!.pop
-    four = three.rotate
-    set4 = four.unshift(n2).unshift(n1)
+  n = n.to_s.split("").map(&:to_i)
+  set1 = n
+  array << set1.join("")
 
-  5.
-    four
-    n3 = four.rotate!.pop
-    n3 = four.rotate!.pop
-    n3 = four.rotate!.pop
-    five = four.rotate
-    set5 = five.unshift(n3).unshift(n2).unshift(n1)
+   two = n.rotate
+   set2 = n.rotate
+   array << set2.join("")
+
+  n1 = two.rotate!.pop
+  three = two.rotate
+  set3 = three.unshift(n1)
+  array << set3.join("")
+
+  n2 = three.rotate!.pop
+  n2 = three.rotate!.pop
+  four = three.rotate
+  set4 = four.unshift(n2).unshift(n1)
+  array << set4.join("")
+
+  n3 = four.rotate!.pop
+  n3 = four.rotate!.pop
+  n3 = four.rotate!.pop
+  five = four.rotate
+  set5 = five.unshift(n3).unshift(n2).unshift(n1)
+
+  array << set5.join("")
+  array = array.map{ |x| x.to_i }.sort.last
 end
