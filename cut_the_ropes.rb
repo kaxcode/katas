@@ -26,7 +26,7 @@ def cut_the_ropes(arr)
   empty = []
   while i < num do
     empty << arr.count { |x| x != 0 }
-    arr = arr.reject{ |x| x == 0 }.collect { |x| x - (arr.reject{ |x| x == 0 }.min) }
+    arr = arr.delete_if{ |x| x == 0 }.collect { |x| x - (arr.reject{ |x| x == 0 }.min) }
     i += 1
     print empty
   end
