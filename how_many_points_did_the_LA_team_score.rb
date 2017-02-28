@@ -21,5 +21,5 @@ results = [
 # In the above example the correct result is a number of 1023, as Los Angeles Lakers got 641 and Los Angeles Clippers got 382, so 641 + 382 = 1023.
 
 def get_los_angeles_points(results)
-  results.select { | a, b | a.include?("Los Angeles") }.map { |x| x[1].split(":")}
+  results.select { | a, b | a.include?("Los Angeles") }.map { |x| x[1].split(":") }.map(&:to_i)
 end
