@@ -9,7 +9,14 @@ def count_positives_sum_negatives(array)
     []
   else
     negative = array.select{ |x| x <= 0}.inject(0) { | x, y | x + y }
-    positive = array.select{ |x| x >= 0}.inject(0) { | x, y | x + y }
+    positive = array.count { |x| x != 0 && x >= 0 }
     [positive, negative]
   end
+end
+
+
+### OR
+
+def count_positives_sum_negatives(array)
+    [array.count{|n| n > 0}, array.select{|n| n < 0}.reduce(0, :+)]
 end
