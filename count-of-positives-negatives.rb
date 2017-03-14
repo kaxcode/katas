@@ -6,7 +6,7 @@
 
 def count_positives_sum_negatives(array)
   if array.empty?
-    0
+    []
   else
     negative = array.select{ |x| x <= 0}.inject(0) { | x, y | x + y }
     positive = array.select{ |x| x >= 0}.inject(0) { | x, y | x + y }
