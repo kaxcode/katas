@@ -5,3 +5,9 @@
 # rps('scissors','paper') // Player 1 won!
 # rps('scissors','rock') // Player 2 won!
 # rps('paper','paper') // Draw!
+
+Scissors > Paper || Paper > Rock || Rock > Scissors
+
+if p1 || p2 equals Scissors then ...
+if p1 || p2 equals Paper then ...
+if p1 || p2 equals Rock then ..
