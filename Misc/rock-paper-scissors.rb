@@ -30,3 +30,21 @@ def rps(p1, p2)
    "Draw!"
   end
 end
+
+### OR
+
+def rps(p1, p2)
+  return 'Draw!' if p1 == p2
+
+  result = win_matrix[p1.to_sym][p2.to_sym]
+
+  "Player #{result} won!"
+end
+
+def win_matrix
+  {
+    rock:     { paper: 2, scissors: 1 },
+    paper:    { scissors: 2, rock: 1 },
+    scissors: { rock: 2, paper: 1 }
+  }
+end
