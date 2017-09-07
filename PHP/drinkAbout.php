@@ -15,6 +15,6 @@ function people_with_age_drink(int $old) {
 
 //cleverest
 
-function clever_people_with_age_drink(int $n): string {
+function clever_people_with_age_drink(int $n) {
   return 'drink ' . ($n < 21 ? $n < 18 ? $n < 14 ? 'toddy' : 'coke' : 'beer' : 'whisky');
 }
