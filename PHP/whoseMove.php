@@ -8,3 +8,14 @@ function whose_move(string $last_player, bool $win) {
     return $last_player;
   }
 }
+
+
+//Clever answer
+
+function clever_whose_move(string $last_player, bool $win) {
+  if ($win) {
+    return $last_player;
+  }
+
+  return ($last_player == 'white') ? 'black' : 'white';
+}
